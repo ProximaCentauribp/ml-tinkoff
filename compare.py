@@ -7,7 +7,6 @@ import argparse
 def remove_comments(source):
     string = re.sub(re.compile("'''.*?'''", re.DOTALL), "", source)
     string = re.sub(re.compile('""".*?"""', re.DOTALL), "", source)
-    string = re.sub(re.compile("(?<!(['\"]).)#[^\n]*?\n"), "\n", string)
     return string
 
 
